@@ -11,11 +11,16 @@ npm install react-native-thub-rn-fingerprint
 ## Usage
 
 ```js
-import ThubRnFingerprint from "react-native-thub-rn-fingerprint";
+import ThubRnFingerprint from 'react-native-thub-rn-fingerprint';
 
-// ...
-
-const result = await ThubRnFingerprint.multiply(3, 7);
+ThubRnFingerprint.authenticateLocally(
+  (data) => {
+    Alert.alert(data);
+  },
+  (errorMessage) => {
+    Alert.alert(errorMessage);
+  }
+);
 ```
 
 ## Contributing
